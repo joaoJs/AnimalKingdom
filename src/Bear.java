@@ -4,6 +4,11 @@ public class Bear extends Critter {
     private boolean polar;
     private int count = 0;
 
+    public Bear(boolean p) {
+        //super();
+        polar = p;
+    }
+
     public Action getMove(CritterInfo info) {
         if (info.getFront() == Neighbor.OTHER) {
             return Action.INFECT;
@@ -24,8 +29,10 @@ public class Bear extends Critter {
 
     public String toString() {
         if (count % 2 == 0) {
+            count++;
             return "/";
         } else {
+            count++;
             return "\\";
         }
     }

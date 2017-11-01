@@ -4,6 +4,10 @@ public class NinjaCat extends Critter {
     private int count = 0;
     private int countSt = -1;
 
+    public NinjaCat() {
+        super();
+    }
+
     public Action getMove(CritterInfo info) {
         if (info.getFront() == Neighbor.OTHER) {
             return Action.INFECT;
@@ -26,6 +30,6 @@ public class NinjaCat extends Critter {
 
     public String toString() {
         countSt++;
-        return "-" + countSt + "-";
+        return "-" + countSt % 5 + "-";
     }
 }

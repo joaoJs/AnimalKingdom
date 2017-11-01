@@ -3,6 +3,10 @@ import java.awt.*;
 public class Giant extends Critter {
     private int count = 0;
 
+    public Giant() {
+        super();
+    }
+
     public Action getMove(CritterInfo info) {
         if (info.getFront() == Neighbor.OTHER) {
             return Action.INFECT;

@@ -3,6 +3,10 @@ import java.awt.*;
 public class WhiteTiger extends Critter {
     private boolean hasInfected = false;
 
+    public WhiteTiger() {
+        super();
+    }
+
     public Action getMove(CritterInfo info) {
         if (info.getFront() == Neighbor.OTHER) {
             hasInfected = true;

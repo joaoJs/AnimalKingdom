@@ -4,6 +4,10 @@ public class Tiger extends Critter {
     private int count = 0;
     private int random = (int)(Math.floor(Math.random() * 3));
 
+    public Tiger() {
+        super();
+    }
+
     public Action getMove(CritterInfo info) {
         if (info.getFront() == Neighbor.OTHER) {
             return Action.INFECT;

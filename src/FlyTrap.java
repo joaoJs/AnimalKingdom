@@ -5,6 +5,12 @@
 import java.awt.*;
 
 public class FlyTrap extends Critter {
+
+
+    public FlyTrap() {
+        super();
+    }
+
     public Action getMove(CritterInfo info) {
         if (info.getFront() == Neighbor.OTHER) {
             return Action.INFECT;
