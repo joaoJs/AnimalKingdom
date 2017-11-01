@@ -1,17 +1,33 @@
 import java.awt.*;
 
 public class Bear extends Critter {
+    private boolean polar;
+    private int count = 0;
 
     public Action getMove(CritterInfo info) {
-        return Action.RIGHT;
+        if (info.getFront() == Neighbor.OTHER) {
+            return Action.INFECT;
+        } else if (info.getFront() == Neighbor.EMPTY) {
+            return Action.HOP;
+        } else {
+            return Action.LEFT;
+        }
     }
 
     public Color getColor() {
-        return Color.BLACK;
+        if (polar) {
+            return Color.WHITE;
+        } else {
+            return Color.BLACK;
+        }
     }
 
     public String toString() {
-        return "B";
+        if (count % 2 == 0) {
+            return "/";
+        } else {
+            return "\\";
+        }
     }
 
 }

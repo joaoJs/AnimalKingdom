@@ -41,6 +41,7 @@ public class Critter {
 
     // This method should be overriden (default action is turning left)
     public Action getMove(CritterInfo info) {
+
         return Action.LEFT;
     }
 
@@ -59,4 +60,6 @@ public class Critter {
     public final boolean equals(Object other) {
         return this == other;
     }
+
+
 }
